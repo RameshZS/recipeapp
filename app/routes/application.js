@@ -32,7 +32,6 @@ export default class ApplicationRoute extends Route {
       });
     }
     this.addNewRecipes();
-    console.log(this.store.peekRecord('user-details', '08taiod4').recipe_name);
     return recipesArray;
   }
   /*Add the new recipes data from local storage and add the recipe data in ember data*/

@@ -1,0 +1,70 @@
+{{page-title "Recipesapp"}}
+<div id="banner-container">
+  <NavbarContainer></NavbarContainer>
+</div>
+<div class="category_container" id="category_container">
+    <h4 id="cate_title">CATEGORIES</h4>
+  <div class="category">
+      <div id="breakfast">
+          <div id="bf_pic1" class="category_images">
+            <h4 id="breakfast_title">BREAK FAST</h4>
+          </div>
+          <p class="about_food">Breakfast is the most important meal of the day. When you feed yourself what your body needs when it needs it, that's love. So give your bod some TLC and sit down and enjoy a good, substantial breakfast</p>
+        <button type="button" class="go_to_Button">GO TO<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
+      </div>
+      <div id="lunch_div" >
+          <div id="lunch_pic1" class="category_images">
+            <h4 id="lunch_title">LUNCH</h4>
+          </div>
+          <p class="about_food">Lunch is special food of each country.Each country has a unique meal of the lunch.we ignore the lunch,it's means we don't care about them health.Breakfast is king.lunch is princess.Dinner is queen.</p>
+         <button type="button" class="go_to_Button">GO TO<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
+      </div>
+      <div id="dinner_div" >
+          <div id="dinner_pic1" class="category_images">
+            <h4 id="dinner_title">DINNER</h4>
+          </div>
+          <p class="about_food">The dinner table is the center for the teaching and practicing not just of table manners but of conversation, family feeling, and just about all the other accomplishments of polite society except the minuet.</p>
+         <button type="button" class="go_to_Button">GO TO<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button> 
+      </div>
+      <div id="snacks_div" >
+          <div id="snacks_pic1" class="category_images">
+            <h4 id="snacks_title">SNACKS</h4>
+          </div>
+          <p class="about_food">The dinner table is the center for the teaching and practicing not just of table manners but of conversation, family feeling, and just about all the other accomplishments of polite society except the minuet.</p>
+         <button type="button" class="go_to_Button">GO TO<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button> 
+      </div>      
+  </div>
+</div>
+<div class="recipe_container" id="recipe_container">
+  <h4 id="recipe_title">RECIPES</h4>
+       <RecipesContainer @data={{this.model}}>
+        
+       </RecipesContainer>
+</div>
+<div class="ads_container">
+<h4 id="contact_title">CONTACT</h4>
+<div class="ads_block">
+  <div id="gift_box">
+    <h3 class="ads_title">BUY GIFT CARDS ONLINE</h3>
+    <h3 class="about_this_box">Provide with our Gift Card to whom you most want and is sure.</h3>
+    <div id="gift_button">GIFT CARD</div>
+  </div>
+  <div id="subscribe_box">
+    <h3 class="ads_title">SUBSCRIBE TO GOODFOOD MAGAZINE</h3>
+    <h3 class="about_this_box">Get recipes, tips, and news delivered to your inbox.</h3>
+    <div class="mailtext_box">
+      <input type="text"  value="" placeholder="Enter your mail *" id="mail"/>
+      <input type="button" value="SUBSCRIBE" id="subscribe_button">
+    </div>
+  </div>
+  <div id="explore_box">
+     <h3 class="ads_title">VISIT OUR STORE</h3>
+     <h3 class="about_this_box">Here you’ll find a carefully chosen kitchen inventory.</h3>
+     <div id="explore_button">EXPLORE SHOP</div>
+  </div>
+</div>
+<FooterContainer>
+
+</FooterContainer>
+</div>
+{{outlet}}

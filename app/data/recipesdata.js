@@ -1,0 +1,215 @@
+export const recipes = [
+  {
+    recipe_name: 'APPETIZER MUSSELS',
+    time: '20min',
+    type: 'Dinner',
+    image:
+      'https://www.carolinescooking.com/wp-content/uploads/2020/10/appetizers-square.jpg',
+    ingredients: [
+      'white wine',
+      'tomato',
+      'clam juice cocktail',
+      'garlics(pleede-sliced)',
+      'pepper flaks',
+      'butter',
+    ],
+    timeManageMent: [
+      {
+        prep: '10 min',
+        cook: '10 min',
+        readyin: '20 min',
+      },
+    ],
+    level: 'Difficult',
+    Rating: '⭐⭐⭐⭐',
+  },
+  {
+    recipe_name: 'BEAN SALAD WITH CELERY',
+    time: '2h 15min',
+    type: 'Dinner',
+    image:
+      'https://www.inspiredtaste.net/wp-content/uploads/2020/07/Bean-Salad-Recipe-2-1200.jpg',
+    ingredients: [
+      'small onion',
+      'stalk cherry',
+      'kidney beans, drained and rinsed',
+      'garbanzo beans',
+      'cut green beans',
+      'olive oil',
+      'white wine vinegar',
+      'white sugar',
+      'celery seed',
+      ' ground black pepper',
+    ],
+    timeManageMent: [
+      {
+        prep: '15 min',
+        cook: '1 hr',
+        readyin: '2h 15 min',
+      },
+    ],
+    level: 'difficulty',
+    Rating: '⭐⭐⭐⭐',
+  },
+  {
+    recipe_name: 'BEER CHEESE DIP',
+    time: '40 min',
+    type: 'Snacks',
+    image:
+      'https://mccormick.widen.net/content/amtutsigoi/jpeg/scottish_ale_beer_cheese_dip18262.jpg',
+    ingredients: [
+      'cheese food, cut into 1/2-inch cubes',
+      'Irish stout beer',
+      'salsa',
+      'Worcestershire sauce',
+      'chili powder',
+      'onion powder',
+      'cayenne pepper',
+    ],
+    timeManageMent: [
+      {
+        prep: '10 min',
+        cook: '30 min',
+        readyin: '40 min',
+      },
+    ],
+    level: 'Average',
+    Rating: '⭐⭐⭐⭐',
+  },
+  {
+    recipe_name: 'ANDHRA CHICKEN',
+    time: '1 hr',
+    type: 'Lunch',
+    image:
+      'https://www.indianhealthyrecipes.com/wp-content/uploads/2018/07/chicken-fry.jpg',
+    ingredients: [
+      'chicken',
+      'ginger carlic paste',
+      'red chilli powder',
+      'garam masala',
+      'coriander powder',
+      'pepper powder',
+      'curry leaves',
+      'corn flour powder',
+      'oil',
+    ],
+    timeManageMent: [
+      {
+        prep: '15 min',
+        cook: '45 min',
+        readyin: '1 hr',
+      },
+    ],
+    level: 'Average',
+    Rating: '⭐⭐⭐⭐',
+  },
+  {
+    recipe_name: 'BRONTOSAURUS BURGERS',
+    time: '50 min',
+    type: 'Dinner',
+    image:
+      'https://good-food.cmsmasters.net/wp-content/uploads/2017/06/75636117.jpg',
+    ingredients: [
+      'bread, torn into bite size pieces',
+      'egg',
+      'beef chuck',
+      'beef sirloin',
+      'onion soup mix',
+      'Worcestershire sauce',
+      'hot pepper sauce',
+      'barbeque sauce',
+    ],
+    timeManageMent: [
+      {
+        prep: '10 min',
+        cook: '40 hr',
+        readyin: '50 min',
+      },
+    ],
+    level: 'Average',
+    Rating: '⭐⭐⭐',
+  },
+  {
+    recipe_name: 'CHERRY PIE',
+    time: '3 hr',
+    type: 'Snacks',
+    image:
+      'https://i.pinimg.com/originals/c2/e8/86/c2e886b4673d7f9a8f52e92a906b7d63.jpg',
+    ingredients: [
+      'all-purpose flour',
+      'cold water',
+      'salt',
+      'pitted sour cherries',
+      'white sugar',
+      'cornstarch',
+      'butter',
+      'almond extract',
+    ],
+    timeManageMent: [
+      {
+        prep: '30 min',
+        cook: '45 min',
+        readyin: '3 hr',
+      },
+    ],
+    level: 'Difficult',
+    Rating: '⭐⭐⭐⭐',
+  },
+  {
+    recipe_name: 'DAL KICHADI',
+    time: '40 min',
+    type: 'Lunch',
+    image:
+      'https://asmallbite.com/wp-content/uploads/2018/05/Moong-Dal-Khichdi-Recipe-450x375.jpg',
+    ingredients: [
+      'Dal',
+      'Ghee',
+      'Rice',
+      'Turmeric',
+      'Lentil',
+      'chilli powder',
+      'Garam masala',
+      'Ginger',
+      'cummin',
+      'Coariendar',
+    ],
+    timeManageMent: [
+      {
+        prep: '10 min',
+        cook: '20 min',
+        readyin: '40 min',
+      },
+    ],
+    level: 'Difficult',
+    Rating: '⭐⭐⭐⭐⭐',
+  },
+  {
+    recipe_name: 'CREAMY MUSHROOM PASTA',
+    time: '45 min',
+    type: 'Break fast',
+    image:
+      'https://www.inspiredtaste.net/wp-content/uploads/2020/07/Bean-Salad-Recipe-2-1200.jpg',
+    ingredients: [
+      'olive oil',
+      'white mushrooms,',
+      'shiitake mushrooms',
+      'black pepper',
+      'garlic, minced',
+      'Ounces sherry',
+      'chicken',
+      'whipping cream',
+      'fettuccine pasta',
+      'fresh chives',
+      'Parmigiano-Reggiano cheese',
+    ],
+    timeManageMent: [
+      {
+        prep: '15 min',
+        cook: '30 min',
+        readyin: '45 min',
+      },
+    ],
+    level: 'Difficult',
+    Rating: '⭐⭐⭐⭐',
+  },
+];

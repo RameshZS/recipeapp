@@ -1,0 +1,48 @@
+{{page-title "AddnewRecipe"}}
+<div class="form_block">
+    <div class="form_container">
+        <h2 class="add_title">ADD NEW RECIPE</h2>
+        <div class="input_block">
+            <h3>Paste Recipe image URL :</h3>
+            <Input 
+            @type="text" 
+            @id="recipe_img_text" 
+            placeholder="paste your image url" 
+            @value={{this.image}} />
+        </div>
+         <div class="input_block">
+            <h3>Receipe_name :</h3>
+            {{input type="text" id="recipe_name_input" value=this.recipe_name }}
+        </div>
+         <div class="input_block">
+            <h3>Recipe preparation Full time :</h3>
+            {{input type="text"  value=this.time }}
+        </div>
+         <div class="input_block">
+            <h3>select Food type :</h3>
+            <SelectTagContainer @data={{this.model.categoryType}} @value={{this.value}} ></SelectTagContainer>
+        </div>
+         <div class="input_block">
+            <h3>Recipe Ingredients(using coma) :</h3>
+            {{textarea id="textarea" cols="30" rows="5"  value=this.ingredients }}
+        </div>
+        <div class="input_block">
+            <h3>Prepartion time:</h3>
+            {{input type="text"  value=this.preptime }}
+        </div>
+         <div class="input_block">
+            <h3>Cooking time:</h3>
+            {{input  type="text" value=this.cooktime }}
+        </div>
+         <div class="input_block">
+            <h3>Diffculty Level:</h3>
+           <SelectTagContainer @data={{this.model.level}} @value={{this.value}} ></SelectTagContainer>
+        </div>
+        <div class="input_block">
+            <h3>Rating of the Recipe :</h3>
+           <SelectTagContainer @data={{this.model.Rating}} @value={{this.value}} ></SelectTagContainer>
+        </div>
+        <button type="button" {{on 'click' this.addNew}} >ADD</button>
+    </div>
+</div>
+{{outlet}}

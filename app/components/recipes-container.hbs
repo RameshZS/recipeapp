@@ -1,0 +1,27 @@
+<div class="recipe_block">
+    {{#each @data as |recipe|}}
+        
+     <LinkTo @route="recipe-preview" @model={{recipe.id}} class="linkTo"><div class="recipe_div">   
+         <img src={{recipe.image}} class="recipe_image" />
+         <h4 class="recipe_name">{{recipe.recipe_name}}</h4>
+         
+         <div class="recipe_details">
+             
+             <div class="timebox">
+                 
+                 <i class="fa fa-clock-o" aria-hidden="true"></i>
+                 
+                 <h4 class="time">{{recipe.time}}</h4>
+             
+             </div>
+             
+             <div class="food_type">{{recipe.type}}</div>
+         
+         </div>
+       
+        </div>
+     </LinkTo>
+    
+    {{/each}}
+</div>
+    {{yield}}

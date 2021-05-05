@@ -1,0 +1,13 @@
+{{page-title "DeletePage"}}
+<div class="delete_Container">
+    <div class="delete_box">
+        <h3>Delete Recipe</h3>
+        <p>You want to delete  {{this.model.recipe_name}} recipe?</p>
+        <div class="del_button_block">
+            <button type="button" {{on 'click' this.deleteRecipe}} value={{this.model.id}}>Yes</button>
+            <button type="button" {{on 'click' this.cancelDeleteOperation}}>No</button>
+        </div>
+    </div>
+</div>
+
+{{outlet}}

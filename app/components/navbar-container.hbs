@@ -1,0 +1,38 @@
+<nav>
+  
+ <div class="social_icon" >
+ </div>
+ <ul id="option_bar">
+   <div><a href="../recipesapp" class="link"><li>HOME</li></a></div>  
+  <div><a href="#category_container" class="link"><li>CATEGORIES</li></a></div>
+   <div><a href="../recipes-page" class="link"><li>RECIPES</li></a></div>
+   {{#if this.userLogin}}
+     <div><a href="../recipesapp" class="link"><li   {{on 'click' this.logoutUser}}>LOGOUT</li></a></div>
+     {{else}}
+      <div><a href="../login-page" class="link"><li>LOGIN</li></a></div>
+     <div><a href="../signup-page" class="link"><li>SIGNUP</li></a></div>
+   {{/if}} 
+ </ul>
+ <div id="search_box">
+   {{#if this.userLogin}}
+     <div><a href="../addnew-recipe" id="addRecipe"><i class="fa fa-plus-square" aria-hidden="true"></i></a></div>
+  {{else}}
+     <div><a href="../signup-page" id="addRecipe"><i class="fa fa-plus-square" aria-hidden="true"></i></a></div>
+   {{/if}}
+  <div id="search"><input type="text" {{on 'input' this.searchTheRecipe value='this.value'}} ><div><i class="fa fa-search" aria-hidden="true"></i></div></div>
+  {{#if this.lengthOfInput}}
+     <div class="result_container" id="{{if this.lengthOfInput "show"}}" >
+       {{#if this.noResult}}
+         <p>No Result Available</p>
+       {{/if}}
+  {{#each this.searchRecipe as |recipe|}}
+    <LinkTo @route="recipe-preview" @model={{recipe.id}} class="search_recipe_link"><div class="result_recipe_box">
+     <img src={{recipe.image}} id="search_image"/>
+     <h5>{{recipe.recipe_name}}</h5>
+    </div></LinkTo>
+  {{/each}}
+    </div>
+  {{/if}}
+ </div>
+  </nav>
+{{yield}}

@@ -1,0 +1,636 @@
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    width: 100%;
+    height:100vh;
+}
+#banner-container{
+    width:100%;
+    height:80vh;
+    background-image: url("https://images.squarespace-cdn.com/content/v1/5a0b700329f1871d181e96ae/1519365497321-VF57ZZUDRZHZF3URA1NO/ke17ZwdGBToddI8pDm48kPTrHXgsMrSIMwe6YW3w1AZ7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0k5fwC0WRNFJBIXiBeNI5fKTrY37saURwPBw8fO2esROAxn-RKSrlQamlL27g22X2A/recipes+banner+.jpg?format=1500w");
+    background-size:100% 100%;
+}
+nav{
+    position: fixed;
+    width:100%;
+    padding:1% 0%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    box-shadow: 0px 0px 5px 0px #8888;
+    background-color:rgba(255,255,255,0.7);
+    z-index: 5;
+}
+.social_bar{
+    width:10%;
+    box-shadow: 0px 0px 5px 0px #8888;
+    border-radius: 50%;
+}
+#option_bar{
+    width:40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+li{
+    list-style: none;
+    cursor: pointer;
+}
+.link{
+    text-decoration: none;
+    color: black;
+}
+ul div{
+    width:15%;
+}
+#search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:1px solid black;
+}
+#search input{
+    border:none;
+    outline: none;
+    text-transform: capitalize;
+}
+
+#show{
+  display: block;
+}
+#hide{
+    display: none;
+}
+.result_container{
+  position: absolute;
+  top:100%;
+  width:90%;
+  margin:3% auto;
+  background-color: black;
+  padding:3%;
+  color:white;
+  box-shadow:0px 0px 5px 0px #8888;
+  display: none;
+}
+.result_recipe_box{
+   width:100%;
+   color: white;
+   margin:2% auto;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+#search_image{
+    width:40px;
+    height:40px;
+}
+.search_recipe_link{
+    width:90%;
+    margin:2% auto;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+}
+.category_container,.recipe_container,.ads_container,.recipe_details_container,.recipe_list_container{
+    width:100%;
+    margin:2% 0%;
+    padding:2% 0%;
+    position: relative;
+    text-align:center;
+    border-top:1px dotted black;
+    text-align: center;
+}
+#cate_title,#recipe_title,#contact_title,#default_content,.recipe_page_title{
+   padding:.3% 3%;
+    position: absolute;
+    left:50%;
+    top:-0%;
+    transform: translate(-50%, -50%);
+    background-color: blue;
+    color:white;
+    border-radius: 20px 20px 20px 20px;
+}
+#default_content{
+    background-color: lightsalmon;
+}
+.category{
+    width:70%;
+    padding:2% 0%;
+    margin:auto;
+    box-shadow:0px 0px 5px 0px #8888;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#breakfast,#lunch_div,#dinner_div,#snacks_div{
+    width:24%;
+    box-shadow:0px 0px 3px 0px #8888;
+}
+.category_images{
+    width:100%;
+    height:200px;
+    background-size:100% 100%;
+    position: relative;
+    text-align: center;
+}
+#bf_pic1{
+    background-image: url("https://media.istockphoto.com/photos/breakfast-with-bacon-eggs-pancakes-and-toast-picture-id533645537?k=6&m=533645537&s=612x612&w=0&h=iccHuYLLyNyO_Ok84RKBB-pHEc-sPiS6zC_IMlch-QA=");
+}
+#lunch_pic1{
+    background-image: url("https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2083%2Ftrend20181105100605.jpg");
+}
+#dinner_pic1{
+    background-image: url("https://www.archanaskitchen.com/images/archanaskitchen/0-Affiliate-Articles/Recipe_Collection/7_Wholesome_Indian_Dinner_Recipes_For_Vegan_Nights.jpg");
+}
+#snacks_pic1{
+    background-image: url("https://www.foodbusinessnews.net/ext/resources/FBN-Features/7/SaltySnacks_Lead.jpg?1530804417");
+}
+#breakfast_title,#lunch_title,#dinner_title,#snacks_title{
+    position:absolute;
+    bottom:-15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: orangered;
+    padding:2% 7%;
+    border-radius: 20px 20px 20px 20px;
+    color:white;
+}
+.about_food{
+    min-height:200px;
+   padding:10% 0%;
+   text-align: center;
+   letter-spacing:2px;
+}
+#search_box{
+    width:15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+}
+.go_to_Button{
+    padding:2% 5%;
+    margin-bottom: 3%;
+    letter-spacing:3px;
+    border:none;
+    outline:none;
+    background-color:lightgreen;
+    color:white;
+}
+.recipe_block{
+    width:70%;
+    padding:2% 0%;
+    margin:auto;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+}
+.linkTo{
+    width:23%;
+    margin:3% 0%;
+    text-decoration: none;
+    color: black;
+}
+.recipe_div{
+    width:100%;
+}
+.recipe_image{
+    width: 100%;
+    height:350px;
+    background-size:100% 100%;
+}
+.recipe_details{
+    width:100%;
+    padding:3% 0%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    color:gray;
+    border-top:1px dotted gray;
+    border-bottom:1px dotted gray;
+}
+.timebox{
+    width:35%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.recipe_name{
+    padding:5% 0%;
+    text-align:left;
+}
+.ads_block{
+    width:85%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#gift_box,#subscribe_box,#explore_box{
+    width:30%;
+    min-height: 300px;
+    padding:2% 0%;
+    //border: 1px solid black;
+    color:white;
+}
+.ads_title{
+  padding:2% 0%;  
+  width:80%;
+  margin: auto;
+  border-top: 3px solid rgba(255, 255, 255, 0.938);
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.856);
+}
+.about_this_box{
+    width:80%;
+    margin: auto;
+    padding:5% 0% ;
+    font-size: 25px;
+}
+#gift_box{
+    background-image: url("https://images.unsplash.com/photo-1491739481003-2991327b66e2?ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8OXwxNTMzNTEwfHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80");
+    background-size: 100% 100%;
+    
+}
+#subscribe_box{
+    background-color: rgb(255, 113, 88);
+}
+#explore_box{
+    background-color: steelblue;
+}
+#gift_button,#explore_button{
+    width:25%;
+    padding:2% 0%;
+    background-color:  rgb(255, 113, 88);
+    margin:auto;
+}
+#explore_button{
+    background-color: rgba(0, 0,0,0.1);
+}
+.mailtext_box{
+    width:70%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:1px solid white;
+}
+.mailtext_box input{
+    min-height: 30px;
+    outline: none;
+    border: none;
+} 
+#mail{
+    width:70%;
+    background-color: rgba(0,0,0,0.1);
+   
+}
+#subscribe_button{
+    width:30%;
+    background-color: white;
+    color: rgb(255, 113, 88);
+}
+::placeholder{
+    color:white;
+}
+.social_contact{
+  width:76.8%;
+  padding: 2% 0%;
+  background-color: rgb(50, 90, 122);
+  color: white;
+  margin:auto ;
+  text-align: center;
+}
+.social_icons{
+    width:50%;
+    padding:3% 0%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.social_icons a{
+    width:25%;
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+}
+
+
+/*Recipe-preview  css */
+.recipe_previewContainer{
+    padding:5% 0% 2%;
+    text-align: center;
+}
+.recipe_name_title{
+    font-size:38px;
+    border-bottom: 3px solid black;
+}
+.recipe_details_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.preview_button,.next_button{
+    position: absolute;
+    width:100px;
+    height:30px;
+    line-height: 30px;
+    font-size:25px;
+    border: 1px solid black;
+    transition: .5s;
+}
+.preview_button:focus,.next_button:focus{
+  transform: scale(0.7);
+  display: none;
+}
+.preview_button{
+    top:3%;
+    left:3%;
+}
+.next_button{
+    right:3%;
+}
+.image_time_details{
+    width:50%;
+    padding:2% 0%;
+    border-right:1px dotted black;
+}
+.ingredients_details{
+    width:50%;
+    border: 0px;
+}
+#recipe_image{
+    width:80%;
+    height:600px;
+}
+#time_mangement_table{
+    width:80%;
+    margin:3% auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top:3px solid rgb(2, 2, 143);
+}
+#prep_tm,#cook_tm,#ready_tm,#level,#rating{
+    width:20%;
+    padding:2% 0%;
+    border:1px dotted black;
+    border-top: 0px;
+}
+.time_type{
+    padding:2% 0%;
+    letter-spacing: 2px ;
+}
+.duration{
+    font-size:16px ;
+}
+.items_div{
+   padding:5% 0%;
+}
+.items{
+    float: right;
+}
+.icon{
+    float: left;
+}
+#addRecipe{
+    color: black;
+    font-size:20px ;
+}
+.fa-star{
+    font-size:18px;
+    color: green;
+}
+.ingredient_div{
+    width:60%;
+    min-height:400px;
+    margin: auto;
+    padding:2% 0%;
+}
+.similar_recipes{
+    width:90%;
+    padding:3% 0%;
+    margin: auto;
+}
+#top_bar{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top:3px solid red;
+    border-bottom: 1px dotted black;
+}
+#slide_button{
+    width:40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Edit_link{
+    width:55%;
+    font-size: 18px;
+}
+.Edit_link button{
+    width:100%;
+}
+.about_food_type{
+    width:80%;
+    padding: 2% 0%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.slideContainer{
+    width:90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+     overflow-x: scroll;
+}
+.similar_recipe_link{
+    width:30%;
+    padding:1% 0%;
+    color: black;
+    text-decoration: none;
+}
+.slide_box{
+    width:100%;
+}
+.slide_image{
+    width:100%;
+    height:200px;
+}
+
+.form_block{
+    width:100%;
+    height:100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form_container{
+    width:50%;
+    margin: auto;
+    box-shadow: 0px 0px 5px 0px #8888;
+    padding:2% 0%;
+    text-align: center;
+}
+.input_block{
+    width:60%;
+    padding:2%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+textarea{
+    resize: none;
+}
+#recipe_name_input{
+    text-transform: uppercase;
+}
+
+/* */
+.back_arrow{
+    width:80%;
+    margin: auto;
+    padding:2% 0%;
+    font-size:28px ;
+    text-align: left;
+}
+
+/*signup-page css */
+.signup_container,.login-container{
+    width:100%;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.signup_box,.login_box{
+    width:60%;
+    box-shadow: 0px 0px 5px 0px #8888;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#left_side_block,#login_left_side{
+    width:50%;
+    height:700px;
+    background-size: 100% 100%;
+    text-align: left;
+}
+#left_side_block{
+    background-image:url("https://lh3.googleusercontent.com/proxy/fGAEn8sibsOE3wX2EN5RenqPEHZQTgJc-kJRTBm1nSPsQFlligZeovZ_JYx1W2gFdilZsR6tdU1svtNiE97crq0f3897fMxy_mXCv7-wqs-KZi-syp-6Jv8AHzqpJauz1d90mbdcjUXQy7v5AgIlmuWquDJgiw8");
+}
+#login_left_side{
+    background-image: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-200212-migas-0148-portrait-pf-1582835982.jpg");
+}
+#left_side_block a{
+   margin: 3% 0%;;
+    font-size: 30px;
+    color: white;
+}
+#right_side_block,#login_right_side{
+    width:50%;
+}
+.signup_input,.login_input{
+    width:60%;
+    height:30px;
+    font-size:20px;
+    margin:5% auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius:10px 10px 10px 10px;
+    box-shadow: 0px 0px 5px 0px #8888;
+}
+.signup_icon{
+    width:15%;
+    border-right: 1px solid black;
+}
+.signup_icon i{
+    color: gray;
+}
+.signup_input input,.login_input input{
+    width:85%;
+    padding-left:3px ;
+    outline: none;
+    border: none;
+}
+#signup_button{
+    width:60%;
+    background-color: lightcoral;
+    color: white;
+    border: none;
+    outline: none;
+    margin:7% 0% ;
+    padding: 2% 0%;
+    border-radius:10px 10px 10px 10px;
+}
+#signup_logo{
+    width:200px;
+    height:200px;
+    margin:3% 0%;
+}
+
+/*edit-page css*/
+.Edit_container{
+    width:100%;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.Edit_box{
+    width:50%;
+    padding:2% 0%;
+    box-shadow: 0px 0px 5px 0px #8888;
+}
+.edit_input_box{
+    width:50%;
+    padding:3%  0%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/*Deleet page*/
+.delete_Container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.delete_box{
+    width:30%;
+    padding:1% 0%;
+    box-shadow:0px 0px 5px 0px #8888;
+    text-align: center;
+}
+.delete_box p{
+    padding:3% 0% ;
+}
+.del_button_block{
+    width:40%;
+    padding:2% 0%;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.del_button_block button{
+    width:45%;
+}
+
+

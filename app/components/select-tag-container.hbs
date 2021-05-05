@@ -1,0 +1,7 @@
+ <select {{on 'change' selectCategory value="target.value"}}>
+    {{#each @data as |type|}}
+    <option value="{{type}}">{{type}}</option> 
+ {{/each}}
+</select>
+
+{{yield}}

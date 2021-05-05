@@ -1,0 +1,9 @@
+body{
+    display: flex;
+    align-items: center;
+}
+.form_block{
+    width:60%;
+    margin: auto;
+    border: 1px solid black;
+}

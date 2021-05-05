@@ -1,0 +1,46 @@
+{{page-title "EditRecipe"}}
+<div class="Edit_container">
+    <div class="Edit_box">
+        <h1>EDIT BOX</h1>
+      <div class="edit_input_box">
+       <h3>Recipe Name :</h3>
+       {{input type="text" name="time" value=this.model.recipeData.recipe_name }}
+      </div>
+       <div class="edit_input_box">
+       <h3>Full Preparation time :</h3>
+       {{input type="text" value=this.model.recipeData.time data=this.time }}
+      </div>
+       <div class="edit_input_box">
+       <h3>Paste image URL :</h3>
+       {{input type="text" value=this.model.recipeData.image }}
+      </div>
+       <div class="edit_input_box">
+       <h3>Select Food category:</h3>
+       <SelectTagContainer @data={{this.model.selectTagData.categoryType}} @value={{this.value}}></SelectTagContainer>
+      </div>
+      <div class="edit_input_box">
+          <h3>Recipe Ingredients(using coma) :</h3>
+          {{textarea id="textarea" cols="30" rows="5"  value=this.model.recipeData.ingredients }}
+      </div>
+      {{#each  this.model.recipeData.timeManageMent as |timeManageMent|}}
+           <div class="edit_input_box">
+          <h3>Preparation time :</h3>
+          {{input type="text" value=timeManageMent.prep }}
+      </div>
+       <div class="edit_input_box">
+          <h3>Cooking time :</h3>
+          {{input type="text" value=timeManageMent.cook }}
+      </div>
+      {{/each}}
+      <div class="edit_input_box">
+       <h3>Difficulty Level:</h3>
+       <SelectTagContainer @data={{this.model.selectTagData.level}} @value={{this.value}}></SelectTagContainer>
+      </div>
+      <div class="edit_input_box">
+       <h3>Rating of the recipe:</h3>
+       <SelectTagContainer @data={{this.model.selectTagData.Rating}} @value={{this.value}}></SelectTagContainer>
+      </div>
+      <button type="button" {{action this.editRecipe }}>EDIT</button>
+    </div>
+</div>
+{{outlet}}

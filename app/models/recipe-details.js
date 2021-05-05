@@ -1,7 +1,6 @@
-import Model, { attr,belongsTo } from '@ember-data/model';
+import Model, { attr } from '@ember-data/model';
 
 export default class RecipeDetailsModel extends Model {
-  @belongsTo('user-details') userName;
 
   @attr recipe_name;
   @attr time;
